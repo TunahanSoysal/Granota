@@ -18,5 +18,7 @@ namespace Granota.Models
             ProductDescription = productDescription;
             ProductPrice = productPrice;
         }
+
+        public Products() { }
     }
 }

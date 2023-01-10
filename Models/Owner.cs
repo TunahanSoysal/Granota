@@ -17,7 +17,7 @@ namespace Granota.Models
         public virtual int? RestaurantId { get; set; }
 
         [ForeignKey("RestaurantId")]
-        public virtual Restaurant Restaurant { get; set; }
+        public virtual Restaurant? Restaurant { get; set; }
 
         public Owner(int ownerId, string name, string password, string? email, int? phone, string? address, int? restaurantId)
         {
@@ -29,5 +29,7 @@ namespace Granota.Models
             Address = address;
             RestaurantId = restaurantId;
         }
+
+        public Owner() { }
     }
 }

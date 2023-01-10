@@ -21,6 +21,7 @@ namespace Granota.Models
             Phone = phone;
             Address = address;
         }
+        public Buyer() { }
     }
 
 }
