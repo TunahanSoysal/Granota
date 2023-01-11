@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* header */
+body {
+  margin: 0;
+}
+/* headerr */
+header {
+  display: flex;
+  background-color: #da2d2d;
+  color: white;
+  font-family: "Squada One", cursive;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  text-decoration-style: none;
+}
+header a {
+  color: white;
+}
+header a:hover {
+  color: rgb(170, 170, 194);
+}
+.center-btns {
+  flex: 1;
+  text-align: center;
+  list-style-type: none;
+  display: inline-block;
+}
+header h1 {
+  padding-left: 5%;
+}
+header li {
+  display: inline-block;
+  font-size: 15px;
+  font-family: "ABeeZee", sans-serif;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.left-btns {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* mainn */
+.red-bckgrnd-row {
+  display: flex;
+  background-color: #da2d2d;
+  font-family: "ABeeZee", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: lighter;
+  padding-left: 5%;
+}
+.col-1 {
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col-1 p {
+  font-size: 14px;
+}
+.col-2 {
+  flex: 1;
+  justify-content: right;
+}
+
+.inline-nav {
+  text-align: left;
+}
+
+.inline-nav li {
+  display: inline-block;
+  border: 1px solid #f3ba00;
+  border-collapse: collapse;
+  border-radius: 10px;
+  list-style-type: none;
+  width: 100px;
+  text-align: center;
+  margin-right: 10px;
+  font-family: "ABeeZee", sans-serif;
+  font-size: 12px;
+}
+.inline-nav li:hover {
+  background-color: #f3ba00;
+  transition: 0.3s;
+}
+.inline-nav a {
+  color: gray;
+}
+.inline-nav a:hover {
+  color: rgb(0, 0, 0);
+}
+.active {
+  background-color: #f3ba00;
+}
+.active a {
+  color: black;
+}
+.ProductCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  justify-content: center;
+}
+
+.restaurantName{
+  text-align: center;
+  font-family: "ABeeZee", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 40px;
+}
+.Card {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  font-family: "ABeeZee", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.Card h3{
+  margin-bottom: 0px;
+}
+.price {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-right: 60px;
+}
+.Card button {
+  border-radius: 6px;
+  outline: 0;
+  color: white;
+  background-color: #000;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-family: "ABeeZee", sans-serif;
+  font-weight:bolder;
+
+}
+
+.Card button:hover {
+  opacity: 0.7;
+}
+
+
+.askQuestion{
+  text-align: center;
+  font-family:"ABeeZee", sans-serif;
+}
+.questionForm input, textarea{
+  background-color: #F7F8FA;
+  border:  1px solid black;
+  border-radius: 10px;
+  min-height: 30px;
+  width: 38.5%;
+  max-width: 297px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+textarea{
+  resize: none;
+  width: 83%;
+  max-width: 620px;
+  font-family: "ABeeZee", sans-serif;;
+}
+.questionForm input:hover, textarea:hover{
+  background-color:#f3ba0025;
+  transition:0.5s;
+  border-radius: 15px;
+}
+.questionForm input[type="submit"]:hover{
+  background-color: #da2d2d;
+  color: white;
+}
+/* footer */
+footer {
+  display: flex;
+  background-color: #da2d2d;
+  color: white;
+  font-family: "Squada One", cursive;
+  margin-top: 130px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+}
+
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: rgb(170, 170, 194);
+}
+footer h1 {
+  padding-left: 5%;
+}
+footer li {
+  display: inline-block;
+  font-size: 15px;
+  font-family: "ABeeZee", sans-serif;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
