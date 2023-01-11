@@ -22,8 +22,7 @@ namespace Granota.Controllers
         // GET: Owners
         public async Task<IActionResult> Index()
         {
-            var granotaContext = _context.Owner.Include(o => o.Restaurant);
-            return View(await granotaContext.ToListAsync());
+              return View(await _context.Owner.ToListAsync());
         }
 
         // GET: Owners/Details/5
@@ -35,7 +34,6 @@ namespace Granota.Controllers
             }
 
             var owner = await _context.Owner
-                .Include(o => o.Restaurant)
                 .FirstOrDefaultAsync(m => m.OwnerId == id);
             if (owner == null)
             {
@@ -48,7 +46,6 @@ namespace Granota.Controllers
         // GET: Owners/Create
         public IActionResult Create()
         {
-            ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "RestaurantId");
             return View();
         }
 
@@ -57,7 +54,7 @@ namespace Granota.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("OwnerId,Name,Password,Email,Phone,Address,RestaurantId")] Owner owner)
+        public async Task<IActionResult> Create([Bind("OwnerId,Name,Password,Email,Phone,Address")] Owner owner)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +62,6 @@ namespace Granota.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "RestaurantId", owner.RestaurantId);
             return View(owner);
         }
 
@@ -82,7 +78,6 @@ namespace Granota.Controllers
             {
                 return NotFound();
             }
-            ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "RestaurantId", owner.RestaurantId);
             return View(owner);
         }
 
@@ -91,7 +86,7 @@ namespace Granota.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("OwnerId,Name,Password,Email,Phone,Address,RestaurantId")] Owner owner)
+        public async Task<IActionResult> Edit(int id, [Bind("OwnerId,Name,Password,Email,Phone,Address")] Owner owner)
         {
             if (id != owner.OwnerId)
             {
@@ -118,7 +113,6 @@ namespace Granota.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "RestaurantId", owner.RestaurantId);
             return View(owner);
         }
 
@@ -131,7 +125,6 @@ namespace Granota.Controllers
             }
 
             var owner = await _context.Owner
-                .Include(o => o.Restaurant)
                 .FirstOrDefaultAsync(m => m.OwnerId == id);
             if (owner == null)
             {
