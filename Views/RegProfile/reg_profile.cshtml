@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Reg Profile";
+    Layout = "LayoutReg";
+}
+<link rel="stylesheet" href="~/css/RegProfile.css" asp-append-version="true" />
+<script src="landing.js"></script>
+<main class="main">
+    <div class="img">
+    </div>
+    <ul class="inline-nav">
+        <li class="active"><a href="#">Profile</a></li>
+        <li><a href="reg-order-history.html">Order History</a></li>
+        <li><a href="reg-settings.html">Settings</a></li>
+    </ul>
+    <div class="row-owner">
+        <div class="row-owner col-1">
+            <!-- <form action="">
+              <h1>Your Restaurant</h1>
+              <input type="text" placeholder="Restaurant Name" />
+              <input type="text" placeholder="Address" />
+              <input type="text" placeholder="Phone Number" />
+              <input type="text" placeholder="Opening Hours" />
+              <input type="text" placeholder="Joined Date" />
+              <input type="submit" value="Edit" onclick="editRestaurant()">
+            </form> -->
+        </div>
+        <div class="row-owner col-2">
+            <form action="" id="formProfileReg1">
+                <h1>Personal Information</h1>
+                <input type="text" placeholder="UserName" />
+                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Address" />
+                <input type="email" placeholder="Email" />
+                <input type="text" placeholder="Phone" />
+                <input type="date" placeholder="Date of Birth" />
+                <input type="button" value="Edit">
+            </form>
+        </div>
+        <div class="row-owner col-3"></div>
+    </div>
+</main> 

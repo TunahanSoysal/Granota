@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Owner Management";
+    Layout = "LayoutReg";
+}
+<link rel="stylesheet" href="~/css/OwnerProfile.css" asp-append-version="true" />
+<script src="landing.js"></script>
+<main class="main">
+    <div class="img">
+    </div>
+    <ul class="inline-nav">
+        <li><a asp-area="" asp-controller="OwnerProfile" asp-action="owner_profile">Profile</a></li>
+        <li class="active"><a href="#">Management</a></li>
+        <li><a asp-area="" asp-controller="OwnerProfile" asp-action="owner_orderHistory">Order History</a></li>
+        <li><a asp-area="" asp-controller="OwnerProfile" asp-action="owner_settings">Settings</a></li>
+    </ul>
+    <div class="row-owner">
+        <div class="row-owner col-1">
+            <form action="" method="post" id="addItem">
+                <h1>Items</h1>
+                <input type="text" id="ItemName" placeholder="Item Name" />
+                <input type="text" id="itemPrice" placeholder="Price" />
+                <input type="text" id="ID" placeholder="ID" />
+                <input type="button" value="Add Item" onclick="addItemToRestaurant()">
+            </form>
+        </div>
+    </div>
+    <div class="items">
+        <table class="itemTable" id="itemTable">
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>ID</th>
+            </tr>
+            <tr>
+                <td>Granota Burger da 90s</td>
+                <td>$6.99</td>
+                <td>#0001</td>
+            </tr>
+            <tr>
+                <td>Granota Burger da 90s</td>
+                <td>$6.99</td>
+                <td>#0003</td>
+            </tr>
+            <tr>
+                <td>Granota Burger da 90s</td>
+                <td>$6.99</td>
+                <td>#0004</td>
+            </tr>
+
+        </table>
+    </div>
+</main> 

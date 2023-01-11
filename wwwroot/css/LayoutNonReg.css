@@ -72,7 +72,7 @@ footer {
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 0;
+    scroll-margin-bottom: 0;
 }
 
     footer a {
