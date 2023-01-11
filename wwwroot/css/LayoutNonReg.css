@@ -1,0 +1,98 @@
+﻿@font-face {
+    font-family: 'squadaone-regular';
+    src: url('../fonts/squada_one/squadaone-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'abeezee-italic';
+    src: url('../fonts/abeezee/abeezee-italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'abeezee-regular';
+    src: url('../fonts/abeezee/abeezee-regular.ttf') format('truetype');
+}
+/* header */
+body {
+    margin: 0;
+}
+/* headerr */
+header {
+    display: flex;
+    background-color: #da2d2d;
+    color: white;
+    font-family: squadaone-regular, cursive;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header a {
+    color: white;
+}
+
+    header a:hover {
+        color: rgb(170, 170, 194);
+    }
+
+.center-btns {
+    flex: 1;
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+}
+
+header h1 {
+    padding-left: 5%;
+}
+
+header li {
+    display: inline-block;
+    font-size: 15px;
+    font-family:abeezee-regular, sans-serif;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.left-btns {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    background-color: #da2d2d;
+    color: white;
+    font-family:squadaone-regular, cursive;
+    margin-top: 130px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+    footer a {
+        color: white;
+    }
+
+        footer a:hover {
+            color: rgb(170, 170, 194);
+        }
+
+    footer h1 {
+        padding-left: 5%;
+    }
+
+    footer li {
+        display: inline-block;
+        font-size: 15px;
+        font-family: abeezee-regular, sans-serif;
+        padding-top: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+

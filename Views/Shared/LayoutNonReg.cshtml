@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Granota</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/LayoutNonReg.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header">
+        <h1><a asp-area="" asp-controller="Home" asp-action="Index">Granota</a></h1>
+      <ul class="header center-btns">
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-area="" asp-controller="Buyers" asp-action="Index">About</a></li>
+            <li><a asp-area="" asp-controller="Owners" asp-action="Index">Contact</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Login</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Sign Up</a></li>
+      </ul>
+      <ul class="header left-btns">
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+      <h1><a href="#">Granota</a></h1>
+      <ul class="header center-btns">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="C:\Users\soysa\Desktop\Granota Rebirth\login\login.html">Login</a></li>
+        <li><a href="C:\Users\soysa\Desktop\Granota Rebirth\login\register.html">Sign Up</a></li>
+      </ul>
+      <ul class="header left-btns">
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
