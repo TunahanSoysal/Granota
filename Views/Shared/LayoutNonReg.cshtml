@@ -9,33 +9,32 @@
 </head>
 <body>
     <header class="header">
-        <h1><a asp-area="" asp-controller="Home" asp-action="Index">Granota</a></h1>
-      <ul class="header center-btns">
-            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-area="" asp-controller="Landing" asp-action="Landing_nonReg">Granota</a></li>
+        <ul class="header center-btns">
+            <li><a asp-area="" asp-controller="Landing" asp-action="Landing_nonReg">Home</a></li>
             <li><a asp-area="" asp-controller="Buyers" asp-action="Index">About</a></li>
             <li><a asp-area="" asp-controller="Owners" asp-action="Index">Contact</a></li>
-            <li><a asp-area="" asp-controller="Landing" asp-action="Landing_reg">Login</a></li>
-            <li><a asp-area="" asp-controller="Landing" asp-action="Landing_reg">Sign Up</a></li>
+            <li><a asp-area="" asp-controller="Login" asp-action="Login">Login</a></li>
+            <li><a asp-area="" asp-controller="Login" asp-action="Register">Sign Up</a></li>
       </ul>
       <ul class="header left-btns">
         <li><a href="#">Search</a></li>
         <li><a href="#">Cart</a></li>
       </ul>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
+   
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    
     <footer>
-      <h1><a href="#">Granota</a></h1>
+        <h1><a asp-area="" asp-controller="Landing" asp-action="Landing_nonReg">Granota</a></h1>
       <ul class="header center-btns">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="C:\Users\soysa\Desktop\Granota Rebirth\login\login.html">Login</a></li>
-        <li><a href="C:\Users\soysa\Desktop\Granota Rebirth\login\register.html">Sign Up</a></li>
+            <li><a asp-area="" asp-controller="Landing" asp-action="Landing_nonReg">Home</a></li>
+            <li><a asp-area="" asp-controller="Buyers" asp-action="Index">About</a></li>
+            <li><a asp-area="" asp-controller="Owners" asp-action="Index">Contact</a></li>
+            <li><a asp-area="" asp-controller="Login" asp-action="Login">Login</a></li>
+            <li><a asp-area="" asp-controller="Login" asp-action="Register">Sign Up</a></li>
       </ul>
       <ul class="header left-btns">
         <li><a href="#">Search</a></li>

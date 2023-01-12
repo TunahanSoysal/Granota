@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Cart";
+    Layout = "LayoutReg";
+}
+<link rel="stylesheet" href="~/css/cart.css" asp-append-version="true" />
+<script src="~/js/cart.js"></script>
+
+    <div class="red-bckgrnd-row">
+        <div class="red-bckgrnd-row col-1">
+            <h1>Best Local Food in Granota</h1>
+            <p>
+                Granota is a courier service in which authentic home cook food is
+                delived to a customer
+            </p>
+        </div>
+        <div class="red-bckgrnd-row col-2">
+            <img src="/pics/chef.png" alt="" />
+        </div>
+    </div>
+
+    <table class="cartTable OrderTable">
+        <tr>
+            <th>Product</th>
+            <th></th>
+            <th></th>
+            <th>Price</th>
+            <th>QTY</th>
+            <th>Unit Price</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="/pics/1.png" alt="" />
+            </td>
+            <td style="text-align: left; padding-left: 10px">
+                <h4>Home Made pizza 12'</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </td>
+            <td></td>
+            <td>$39.98</td>
+            <td>2</td>
+            <td>$19.99</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/pics/5.png" alt="" />
+            </td>
+            <td style="text-align: left; padding-left: 10px">
+                <h4>Home Made pizza 12'</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </td>
+            <td></td>
+            <td>$21.99</td>
+            <td>1</td>
+            <td>$21.99</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/pics/7.png" alt="" />
+            </td>
+            <td style="text-align: left; padding-left: 10px">
+                <h4>Home Made pizza 12'</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </td>
+            <td></td>
+            <td>$31.98</td>
+            <td>2</td>
+            <td>$15.99</td>
+        </tr>
+    </table>
+    <form action="" class="reedem">
+        <input type="text" placeholder="Coupon Code" />
+        <input type="button" value="Reedem" />
+    </form>
+    <table id="total">
+        <tr>
+            <td>Subtotal</td>
+            <td>$998</td>
+        </tr>
+        <tr>
+            <td>Shipping Fee</td>
+            <td>$20</td>
+        </tr>
+        <tr>
+            <td>Coupon</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th>$118</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>
+                <input type="button" value="pay">
+            </th>
+        </tr>
+    </table>

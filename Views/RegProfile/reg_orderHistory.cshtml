@@ -3,14 +3,14 @@
     Layout = "LayoutReg";
 }
 <link rel="stylesheet" href="~/css/RegProfile.css" asp-append-version="true" />
-<script src="landing.js"></script>
+<script src="/js/profile(reg).js"></script>
 <main class="main">
     <div class="img">
     </div>
     <ul class="inline-nav">
-        <li><a href="profile(reg).html">Profile</a></li>
-        <li class="active"><a href="reg-order-history.html">Order History</a></li>
-        <li><a href="reg-settings.html">Settings</a></li>
+        <li><a asp-area="" asp-controller="RegProfile" asp-action="reg_profile">Profile</a></li>
+        <li class="active"><a href="#">Order History</a></li>
+        <li><a asp-area="" asp-controller="RegProfile" asp-action="reg_settings">Settings</a></li>
     </ul>
     <div class="row-owner">
         <div class="row-owner col-1">

@@ -2,6 +2,8 @@
     ViewData["Title"] = "Login";
     Layout = "LayoutNonReg";
 }
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+<script src="/js/login.js"></script>
 <main>
         <div class="red-bckgrnd-row">
             <div class="red-bckgrnd-row col-1">
@@ -9,8 +11,8 @@
                 <p>Granota is a courier service in which authentic home cook food is delived to a customer</p>
             </div>
             <div class="red-bckgrnd-row col-2">
-                <img src="chef.png" alt="">
-            </div>
+            <img src="/pics/chef.png" alt="">
+        </div>
         </div>
         <div class="login-form">
             <form action="">
@@ -18,7 +20,7 @@
                 <p>Sign in and start you adventure!</p>
                 <input type="text" placeholder="UserName" />
                 <input type="password" placeholder="Password" />
-                <input type="button" value="Login">
+                <input type="button" value="Login"><a asp-area="" asp-controller="Landing" asp-action="Landing_reg">Home</a>
                 <a href="forget-password.html">forget password?</a>
             </form>
         </div>
