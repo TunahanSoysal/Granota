@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Granota.Models.Buyer
+@{
     ViewData["Title"] = "Register";
     Layout = "LayoutNonReg";
 }
@@ -15,19 +16,39 @@
         </div>
     </div>
     <div class="login-form">
-        <form action="">
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <h1>Sign Up</h1>
             <p>Sign up and hop on to the food journey!</p>
-            <input type="text" placeholder="UserName" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="number" name="phone" id="phone" placeholder="Phone Number">
+            
+            <input asp-for="Name" class="form-control" placeholder="UserName" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+
+            <input asp-for="Password" class="form-control" placeholder="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+            <input asp-for="Password" class="form-control" placeholder="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+            <input asp-for="Email" class="form-control" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+
+            <input asp-for="Phone" class="form-control" placeholder="Phone Number"/>
+            <span asp-validation-for="Phone" class="text-danger"></span>
+
             <input type="radio" name="regCheck" id="ownerCheck" value="owner">
             <label for="ownerCheck">Owner</label>
+
             <input type="radio" name="regCheck" id="customerCheck" value="customer">
             <label for="customerCheck">Customer</label>
-            <input type="button" value="Login">
+            <input type="submit" value="Register" class="btn btn-primary" />
+            <a asp-area="" asp-controller="Login" asp-action="Login"><input type="button" value="Sign Up"></a>
         </form>
     </div>
 </main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
