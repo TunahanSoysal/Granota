@@ -18,6 +18,8 @@ namespace Granota.Controllers
         {
             return View();
         }
+
+        
         public IActionResult Register()
         {
             return View();
