@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Granota.Models.Products
+
+@{
     ViewData["Title"] = "Owner Management";
     Layout = "LayoutReg";
 }
@@ -15,12 +17,23 @@
     </ul>
     <div class="row-owner">
         <div class="row-owner col-1">
-            <form action="" method="post" id="addItem">
+            <form asp-action="owner_management">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <h1>Items</h1>
-                <input type="text" id="ItemName" placeholder="Item Name" />
-                <input type="text" id="itemPrice" placeholder="Price" />
-                <input type="text" id="ID" placeholder="ID" />
-                <input type="button" value="Add Item" onclick="addItemToRestaurant()">
+
+ 
+                <input asp-for="ProductName" class="form-control" placeholder="Product Name" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+
+
+                <input asp-for="ProductDescription" class="form-control" placeholder="Description" />
+                <span asp-validation-for="ProductDescription" class="text-danger"></span>
+
+                <input asp-for="ProductPrice" class="form-control" placeholder="Product Price" />
+                <span asp-validation-for="ProductPrice" class="text-danger"></span>
+
+
+                <input type="submit" value="Add" class="btn btn-primary" />
             </form>
         </div>
     </div>
